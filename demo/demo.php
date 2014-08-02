@@ -1,5 +1,5 @@
 <?php
-error_reporting(-1);
+//error_reporting(-1);
 require_once(__DIR__.'/../lib/nossl_start.php');
 
 //echo ($nossl->encrypt('<h1>This is a big Test</h1>'));
@@ -19,8 +19,7 @@ if (isset($_REQUEST['KillSession'])){
     echo "<br /><br />SESSION CLEAR<br /><br />";
 }
                                                 
-     
-/*        
+/*
 if (isset($_REQUEST['password'])) {
 		
         echo "<br /><br />RESULT: ".$nossl->decrypt($_REQUEST['password']);

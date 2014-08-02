@@ -4,14 +4,14 @@
 require_once(rtrim(dirname(__FILE__),'/\\').'/phpseclib/Crypt/RSA.php');
 require_once(rtrim(dirname(__FILE__),'/\\').'/aes.class.php');
 require_once(rtrim(dirname(__FILE__),'/\\').'/NoSSL.class.php');
-require_once(rtrim(dirname(__FILE__),'/\\').'/nossl_config/config.php');
+require_once(rtrim(dirname(__FILE__),'/\\').'/../config/config.php');
 
 if (!file_exists(rtrim(dirname(__FILE__),'/\\').'/nossl_config/RSA_privatekey.php') || !file_exists(rtrim(dirname(__FILE__),'/\\').'/nossl_config/RSA_publickey.php')){
     $extra_nossl = new NoSSL();
     $extra_nossl->createNewRSAKey(2048); //A new RSA key is generated and stored in /nossl/nossl_config/RSA_privatekey.php and RSA_publickey.php
 }
-require_once(rtrim(dirname(__FILE__),'/\\').'/nossl_config/RSA_privatekey.php');
-require_once(rtrim(dirname(__FILE__),'/\\').'/nossl_config/RSA_publickey.php');
+require_once(rtrim(dirname(__FILE__),'/\\').'/../config/RSA_privatekey.php');
+require_once(rtrim(dirname(__FILE__),'/\\').'/../config/RSA_publickey.php');
 session_name('nossl');
 session_start();
 
@@ -21,7 +21,6 @@ session_start();
  * $_SESSION['nossl_used_message_ids'] //An array, which saves all message IDs used by the client. In the form $_SESSION['nossl_used_message_ids']['string_of_the_id']
  *   
  */
-
 $nossl = new NoSSL($nossl_rsa_privatekey);
 /*
 if (isset($_REQUEST['nossl_encrypted_ajax'])){
@@ -106,7 +105,7 @@ if (!isset($_SESSION['nossl_used_message_ids'])) $_SESSION['nossl_used_message_i
 */
 
 /*
-// JSON_ENCODE2 as json_encode() doesn't convert German and other characters correctly (ä ö ü ß)
+// JSON_ENCODE2 as json_encode() doesn't convert German and other characters correctly (ï¿½ ï¿½ ï¿½ ï¿½)
 */
 function json_encode2($jsonarray){
         foreach($jsonarray AS &$text)
@@ -178,6 +177,3 @@ else if (isset($_REQUEST['nossl_encrypted_ajax'])){
     
     //echo json_encode2($_REQUEST);
 }
-
-
-?>

@@ -1,6 +1,6 @@
 <?php
 error_reporting(-1);
-require_once('./nossl/nossl_start.php');
+require_once(__DIR__.'/../lib/nossl_start.php');
 
 //echo ($nossl->encrypt('<h1>This is a big Test</h1>'));
 
@@ -49,9 +49,9 @@ if (isset($_REQUEST['password'])) {
             font-family:"Verdana";
         }
     </style>
-    <link href="./nossl/style/nossl.css" type="text/css" rel="stylesheet" />
-    <script src="./nossl/javascript/jquery110.js"></script>
-    <script src="./nossl/javascript/nossl_standard.min.js"></script>
+    <link href="../resources/style/nossl.css" type="text/css" rel="stylesheet" />
+    <script src="../resources/javascript/jquery110.js"></script>
+    <script src="../resources/javascript/nossl_standard.min.js"></script>
 
 
     <script>
@@ -186,7 +186,7 @@ if (isset($_REQUEST['password'])) {
     
      ?>
       <br /><br /><br /><br />
-      <strong style="font-size: small;">NoSSL was invented and developed by <a href="http://www.smartinmedia.com">Smart In Media</a> &copy;2014 - all rights reserved -</strongS>
+      <strong style="font-size: small;">NoSSL was invented and developed by <a href="http://www.smartinmedia.com">Smart In Media</a> &copy;2014 - all rights reserved -</strong>
   
   </div>
 

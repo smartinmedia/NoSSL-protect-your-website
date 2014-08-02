@@ -30,7 +30,7 @@
     <title>NoSSL - Generate Server Key-Pair</title></head>
     <body>
        <div id="content">
-       <h2><img src="./images/nossl-logo.gif" border="" height="" style="position:relative;top:10px;" width="120" alt="NoSSL" /> - Generate a server key pair</h2>
+       <h2><img src="../resources/images/nossl-logo.gif" border="" height="" style="position:relative;top:10px;" width="120" alt="NoSSL" /> - Generate a server key pair</h2>
 <?php
 /*
 ########################################################################################

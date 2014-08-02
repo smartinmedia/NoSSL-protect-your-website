@@ -1,0 +1,14 @@
+<?php
+//NoSSL Public RSA Key - This is the public RSA key, which should be integrated in your javascript. You can freely share!
+
+$nossl_rsa_publickey='@NoSSL_RSAKey_begin@
+dee7eab420cf99510af8299733d4ad5161dde097c8b74065cc7d5258e1e82ec4e
+5511df369c4b442af0871622bc93a26ad546cb04170b60d77629e25eb50fddc4c
+26d7094b8abcfec02f646e32430b6b93f3529ef2fa6820fcb8353872f8ae77e9b
+3969c3e3908d399771136d7cc3a64c1ee1b921c2fdabbc4fb8bc9ad48f994061f
+a03c85c311ca7c772a486385ed4f36d2b29c7788e1db876b8965fe5c8e60fb8a4
+ae25e6cb851ff0b915796249cffe6d5e7f8aa4de7cad1b70052530944d90477a1
+660e5ddbb85878ed890410eac853b40107eed3bfcf0faa9743c114a2f28ef305f
+8158612a65ee0f7f4fe8798e5a69f6c93de25616708f9708d02631347
+@NoSSL_RSAKey_end@';
+?>

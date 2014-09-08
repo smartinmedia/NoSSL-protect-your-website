@@ -1,0 +1,13 @@
+Info about the NoSSL folder:
+
+This folder will store:
+
+/nossl_sessions/key_<key-timestamp>/client_<hash of client-id>.php
+
+In the client_<hash of client-id>.php file, the hashed message IDs will be stored. This is important as we 
+want to protect NoSSL of being tempered with with resending messages.
+
+E. g.: A client sends a NoSSL-encrypted login (username + pass) and someone on the same network intercepts this
+message. Without being able to decrypt it, he/she could send it to login. To prevent this, each message will
+get a unique message ID created by the client to prevent sending a message twice.
+This will however not protect from a man-in-the-middle attack. 

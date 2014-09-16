@@ -125,11 +125,13 @@ function NoSSL() //The ways-variable is the switch if NoSSL works 1way or 2ways 
         for (var i=0;i<scripts.length;i++) {
     // if (scripts[i].src) console.log(i,scripts[i].src)
             if (scripts[i].src.toLowerCase().indexOf("nossl_start.js")!==-1){//We found //..../nossl_start.js, now extract the path!
-                return (scripts[i].src.replace("javascript/nossl_start.js", "") );//Will deliver e. g. http://www.example.com/cunity/nossl/ as the NoSSL path
+				splitScript = scripts[i].src.split("javascript/nossl_start.js");
+                return splitScript[0];//Will deliver e. g. http://www.example.com/cunity/nossl/ as the NoSSL path
                     
             }
             else if (scripts[i].src.toLowerCase().indexOf("nossl_start.min.js")!==-1){//We found //..../nossl_start.js, now extract the path!
-                return (scripts[i].src.replace("javascript/nossl_start.min.js", "") );//Will deliver e. g. http://www.example.com/cunity/nossl/ as the NoSSL path
+				splitScript = scripts[i].src.split("javascript/nossl_start.min.js");
+                return splitScript[0];//Will deliver e. g. http://www.example.com/cunity/nossl/ as the NoSSL path
 
             } 
             

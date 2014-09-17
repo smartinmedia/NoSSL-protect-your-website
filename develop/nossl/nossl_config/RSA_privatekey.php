@@ -30,7 +30,7 @@ GSb8+veJKgnecMUIhqVM5TC4OUDTbtBCiXjkYR0xEiGIOje+qFA=
 -----END RSA PRIVATE KEY-----',
 
 //The current_rsa_timestamp and the last_rsa_timestamp store the Unix-time time(), when the current/last private key was generated. This is important, when the private key is renewed every day or so. The last private key has to be stored here, so that the server still has the right key present for browsers, which dont have the changed key yet. Supports some kind of perfect forward secrecy
-'current_rsa_timestamp' => 1410950769,
+'current_rsa_timestamp' => 1410000,
 
 'last_rsa_privatekey' => '-----BEGIN RSA PRIVATE KEY-----
 MIIEowIBAAKCAQEA73l8hr4xj9HDqrq/GbLqvlIB+3NvUVomFHVaofCLovC+kYi0

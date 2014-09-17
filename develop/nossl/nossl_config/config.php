@@ -1,6 +1,6 @@
 <?php
 
-define('NOSSL_DEBUGGING', false); //This will work through the entire PHP. Set to "false" to not get any messages from debecho, etc!!
+define('NOSSL_DEBUGGING', true); //This will work through the entire PHP. Set to "false" to not get any messages from debecho, etc!!
 
 $nossl_config = array(
         'version'       =>   '1.2',

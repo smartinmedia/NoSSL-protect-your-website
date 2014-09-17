@@ -232,6 +232,4 @@ else if (isset($_REQUEST['nossl_json_data2'])){
 }
      
 
-
-
 ?>

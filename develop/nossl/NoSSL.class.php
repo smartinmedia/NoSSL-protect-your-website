@@ -373,11 +373,17 @@ class NoSSL{
      * 
      */
     public function createNewRSAKey($keylength){
-        $fh = fopen(__DIR__.'/nossl_config/RSA_privatekey.php',"r+");
+        //debecho('IN create new rsa key');
+        global $nossl_config;
+        $file_pk = __DIR__.'/nossl_config/RSA_privatekey.php';
+        $fh = fopen($file_pk,"r+");
         flock($fh, LOCK_EX);
-        $pk = implode(file(__DIR__.'/nossl_config/RSA_privatekey.php',"r+"), '');
-        eval ($pk);
-        if ($nossl_config['private_key_change_interval'] < time() - $nossl_rsa_privatekey['current_rsa_timestamp']){
+        $pk_contents = fread($fh, filesize($file_pk));
+        $regexp='/current_rsa_timestamp.{1}\s*=>\s*([0-9]+)/';
+        $temp = array();
+        preg_match($regexp, $pk_contents, $temp);
+        $cur_ts = intval($temp[1]);
+        if ($nossl_config['private_key_change_interval'] < (time() - $cur_ts)){
 
              if (isset($this->rsa_last_PK_timestamp) && $this->rsa_last_PK_timestamp!=0){
                 $this->deleteOldSessionFolder();
@@ -398,8 +404,10 @@ class NoSSL{
             $this->rsa->setPublicKeyFormat(CRYPT_RSA_PUBLIC_FORMAT_PKCS1);
             $genkey = $this->rsa->createKey($keylength);
             $pub_rsa_key = chunk_split($this->publicRSAKeyToHex($genkey['privatekey']), 65);
-
-            file_put_contents(__DIR__.'/nossl_config/RSA_privatekey.php', "<?php\n//NoSSL Private RSA Key - PROTECT THIS FILE SO THAT NO ONE ACCESSES IT FROM OUTSIDE! Do not share this file with others, else the NoSSL security is hampered!\n\n"
+            rewind($fh);
+            ftruncate($fh, 0);
+            rewind($fh);
+            fwrite($fh, "<?php\n//NoSSL Private RSA Key - PROTECT THIS FILE SO THAT NO ONE ACCESSES IT FROM OUTSIDE! Do not share this file with others, else the NoSSL security is hampered!\n\n"
             ."\$nossl_rsa_privatekey = array('current_rsa_privatekey' => '"
             .$genkey['privatekey']."',\n\n"
             ."//The current_rsa_timestamp and the last_rsa_timestamp store the Unix-time time(), when the current/last private key was generated. This is important, when the private key is renewed every day or so. The last private key has to be stored here, so that the server still has the right key present for browsers, which dont have the changed key yet. Supports some kind of perfect forward secrecy\n"
@@ -411,6 +419,7 @@ class NoSSL{
 
             file_put_contents(__DIR__."/nossl_config/RSA_publickey.php", "<?php\n//NoSSL Public RSA Key - This is the public RSA key, which should be integrated in your javascript. You can freely share!\r\n\r\n\$nossl_rsa_publickey='@NoSSL_RSAKey_begin@\r\n".$pub_rsa_key."@NoSSL_RSAKey_end@';\r\n?>");
         }
+        flock($fh, LOCK_UN);
         fclose($fh);
         
     }

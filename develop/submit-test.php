@@ -11,20 +11,9 @@ if (isset($_REQUEST['KillSession'])){
 }
                                                 
 
-
-    
-     
-    
-
-
-/*        
-if (isset($_REQUEST['password'])) {
-		
-        echo "<br /><br />RESULT: ".$nossl->decrypt($_REQUEST['password']);
-}
-*/
-
 ?>
+  
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -98,17 +87,7 @@ if (isset($_REQUEST['password'])) {
     }
 
 
-    $('document').ready(function(){
-        
-        //nossl.parseServerSettings($('#nossl_serversettings').text());
-        //console.log(nossl.encrypt('This is a test')); 
-       
-
-
-
-	});
-	
-	</script>
+ 	</script>
 	<title>NoSSL demo</title>
 </head>
 <body>

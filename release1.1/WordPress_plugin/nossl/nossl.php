@@ -49,6 +49,7 @@ FOR COMMERCIAL USE, PLEASE INQUIRE THROUGH www.nossl.net
 
 add_action('init', 'process_nossl');
 add_action('wp_enqueue_scripts', 'add_meta_files');
+add_action('login_enqueue_scripts', 'add_meta_files');
 
 /**
  *
@@ -64,5 +65,5 @@ function process_nossl()
 function add_meta_files()
 {
     wp_enqueue_style('nossl-style', plugins_url('/nossl/style/nossl.css', __FILE__), array(), '1.0');
-    wp_enqueue_script('nossl-js', plugins_url('/nossl/javascript/nossl_start.min.js', __FILE__), array(), '1.0');
+    wp_enqueue_script('nossl-js', plugins_url('/nossl/javascript/nossl_start.min.js', __FILE__), array('jquery'), '1.0');
 }

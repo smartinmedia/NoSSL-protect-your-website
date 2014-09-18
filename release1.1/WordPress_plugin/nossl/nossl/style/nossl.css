@@ -1,0 +1,12 @@
+form:after{
+    color:red;
+    content:" \A Please activate JavaScript to submit this form!";
+    white-space: pre;
+}
+form.nossl_remove:after {
+        content:"";
+}
+
+form input[type="submit"]{
+    display: none;
+}

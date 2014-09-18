@@ -32,10 +32,10 @@ FOR COMMERCIAL USE, PLEASE INQUIRE THROUGH www.nossl.net
 
 //set_include_path(get_include_path() . PATH_SEPARATOR .  dirname(__FILE__).'phpseclib');
 //require_once('Net/SSH2.php');
-require_once(__DIR__.'/nossl_config/config.php');
-require_once(__DIR__.'/phpseclib/Crypt/RSA.php');
-require_once(__DIR__.'/aes.class.php');
-require_once(__DIR__.'/NoSSL.class.php');
+require_once(__DIR__ . '/nossl_config/config.php');
+require_once(__DIR__ . '/phpseclib/Crypt/RSA.php');
+require_once(__DIR__ . '/aes.class.php');
+require_once(__DIR__ . '/NoSSL.class.php');
 
 
 if (!file_exists(__DIR__.'/nossl_config/RSA_privatekey.php') || !file_exists(__DIR__.'/nossl_config/RSA_publickey.php')){
@@ -43,8 +43,8 @@ if (!file_exists(__DIR__.'/nossl_config/RSA_privatekey.php') || !file_exists(__D
     $extra_nossl->createNewRSAKey(2048); //A new RSA key is generated and stored in /nossl/nossl_config/RSA_privatekey.php and RSA_publickey.php
 }
 
-require_once(__DIR__.'/nossl_config/RSA_privatekey.php');
-require_once(__DIR__.'/nossl_config/RSA_publickey.php');
+require_once(__DIR__ . '/nossl_config/RSA_privatekey.php');
+require_once(__DIR__ . '/nossl_config/RSA_publickey.php');
 
 
 $client_needs_new_clientid = 0; //If this is 1, the client will get a new client ID
@@ -159,7 +159,7 @@ if (!isset($_SESSION['nossl_used_message_ids'])) $_SESSION['nossl_used_message_i
 */
 
 /*
-// JSON_ENCODE2 as json_encode() doesn't convert German and other characters correctly (ä ö ü ß)
+// JSON_ENCODE2 as json_encode() doesn't convert German and other characters correctly (ï¿½ ï¿½ ï¿½ ï¿½)
 */
 function json_encode2($jsonarray){
         foreach($jsonarray AS &$text)
@@ -231,5 +231,7 @@ else if (isset($_REQUEST['nossl_json_data2'])){
       
 }
      
+
+
 
 ?>

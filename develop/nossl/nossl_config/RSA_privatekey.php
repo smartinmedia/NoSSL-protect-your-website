@@ -2,6 +2,37 @@
 //NoSSL Private RSA Key - PROTECT THIS FILE SO THAT NO ONE ACCESSES IT FROM OUTSIDE! Do not share this file with others, else the NoSSL security is hampered!
 
 $nossl_rsa_privatekey = array('current_rsa_privatekey' => '-----BEGIN RSA PRIVATE KEY-----
+MIIEogIBAAKCAQEA4wk4pZZ7fpme9Ht6QB9Z+bcTq5EaInFqs13dAl78fubeBxXr
+S/png/1WS8VW8RMZcCyxGhnMNW3iQl5lvs9ZFYNkzvm5jP4qtvtVc26nUOdY8nHY
+8n4yEwehjH0bgFPJ6Ilo2b1J0TKUyXGwVp7H+O0og3vw7NaTbrxkPRLsFKvByc8D
+SGzZnktRjkiBlLI8ox37ZAvla0vfv1vVowdSwlDm3egogKVSTojMK5WJOv6oetRt
+i0FBPxxZoKD5OjIc4i3d4/NM49SbcfUZgPx3fp8xEzXdx/1ZVWyZef1kvkXWSN5c
+MgCI8PbUtfPGhQ1DbLxdxWFwhE3jg+g/hqBy3QIDAQABAoIBAAjVdQTMZCW66Hpu
+y4TvM1sKCpPkY3Xvn80228CZ3Y06gm0YJz2fkqOKGe980DM1IQpCUunHEzEJA4K9
+lYvlGXxCzotXICciRJs2EE8bgRsexVE5qM1Wp7Ah3eFPhOBrYjHQFupR+StQooVs
+DQZxyyoeYDMtgWRVvQrT/bp6oAD10xspzBqKJpcB7TNjsBb7KdiC436PdJeTJhLc
+DFIHFcFxBt7KRZHH6NkT2iJAhVFKkhZkIspgp/zsARANabWLKmGj0SieuBWdxPst
+C36Waf7lVQaACxbgYLgx1+2PV4GTPamb+aBKy4rDOoMkns9N8W6Jd6WWsT64NDci
+yCa7ZoECgYEA/9oR5DmtRzpSSbgd53dIYdCM7+NDqmrxQMEUxVWdAwqx/DRkGS5s
+qTs5kFwxuBQb+DK//DiU5vx/on0XdykWCa4EbErY6B03uOaR+guE7Y0UOMOsANNN
+x7K30Bl4Pj08LftG+OQGTFbLvrLXYQtCxW5NXRE5S9OG4PP2Anz7qk0CgYEA4yrh
+IqNNnR3Y4lvMr+7oEKpWA4bpPoMXMV08gSK1OcdneAhfR7x9EJS+v4Og5g1lqY8i
+lGidQc6PQ66iBxc/BN4BaFFvdJqn3jusV4O7WGtJHuDMkJC/rBTlXTbUjdDf+IgO
+VDgMubw5ahp9Ld20u8mJfOIaNJyNsU+YW851EtECgYASKDy60KkOdAIg/zMIGTwG
+zREjeSJ1Nq+2Y72An6nL7HdjKais7NGDVROpvhE9OhgeDiP312Ah4GuCcZQ3va+1
+sibYNJueJWyt75cOgsDFRwzXVnOff192u6U13IjfCeN6c+m+ghg8VLCS8Qg999me
+P0y4PR+u1O0ui8G6vXnyxQKBgAODyFP23t6Ndaua7AHU2nZXjFklnzo+YP98h9Ef
+rlokga9TwdWkTvMQuhrQeI7WqjoDYu+U5sn73i+X5h3h+DGlFbR9fhH5ypsfpTz9
+ZsqpbkoyBDhAZRbOg/X7QTKohq6bvE0FSP0esmy32DP7eC5nod7yyKEDwxV5O8w/
+14PhAoGAfNfI4vLc7GHcdOnQXcOA3dLRhafqfxqNPkmUUW0dsFfmLFHKzjSptjMN
+MfBPDTgKGf27UIKE/ABNCveHW86XsaHiNU6/uLRA7uRE1dZ+u19bDlXH0J5LlYOF
+GSb8+veJKgnecMUIhqVM5TC4OUDTbtBCiXjkYR0xEiGIOje+qFA=
+-----END RSA PRIVATE KEY-----',
+
+//The current_rsa_timestamp and the last_rsa_timestamp store the Unix-time time(), when the current/last private key was generated. This is important, when the private key is renewed every day or so. The last private key has to be stored here, so that the server still has the right key present for browsers, which dont have the changed key yet. Supports some kind of perfect forward secrecy
+'current_rsa_timestamp' => 1410000,
+
+'last_rsa_privatekey' => '-----BEGIN RSA PRIVATE KEY-----
 MIIEowIBAAKCAQEA73l8hr4xj9HDqrq/GbLqvlIB+3NvUVomFHVaofCLovC+kYi0
 rKDbxInjuTrcsBAg7iM72PHoFtaRaWQmPmS9yn1h/NWZy2XuacSUzd2um9RJX63M
 BPP43/hrNkU0rcbKHZ1Y0rjLOh+dVOAKDZGx6XkiJ0B7O1cHPOY5LF7mPl0nZCeW
@@ -29,37 +60,6 @@ nC53OENDOK9ICmP9xhPDLZ23gC1kD/BEYKzSWYXr8dJTw2SEOriuqU+FlZ023UP0
 xFAAJT/IpnSKJJaP6gHibAJP8A3HaEs6RiX9P5aEQMV9LhUfnt2q
 -----END RSA PRIVATE KEY-----',
 
-//The current_rsa_timestamp and the last_rsa_timestamp store the Unix-time time(), when the current/last private key was generated. This is important, when the private key is renewed every day or so. The last private key has to be stored here, so that the server still has the right key present for browsers, which dont have the changed key yet. Supports some kind of perfect forward secrecy
-'current_rsa_timestamp' => 1410175472,
-
-'last_rsa_privatekey' => '-----BEGIN RSA PRIVATE KEY-----
-MIIEpQIBAAKCAQEAq0ApTbWV/HbfEEckq2y1cchmlSNXpyMDAY0h+gReEPCn+ZcX
-2MtDtcDRIGoS4RIw9M8RaB4IwzrrH7J4tWaRQLj4s2YvLJ29LJ9D4LMn+BNGwcYo
-VZL7bzZYd/N7Gw6LA8rm0iPBTbO0DIpfoqsdKX5l+ACiig9nXTbQsmSUqIdnEnBn
-HTPqQIa7DcjRIgXQHuh/13fs1WiX2Eo7H+RUcnfbBhCg4YxWHto061bgPGhdiMHE
-+uJksE3bOv6E0STtHjIcoIrbKrVHPQDpDk9XcgH1CRvHxUdIGPs1qaxepuadGwt4
-litfDLCElDi5iSCXmFWra49swEunpEiHECaTuQIDAQABAoIBAQCeSDlk5/dvV/eo
-tfkAsQOr3UxjgD0d8FBw+J901OCUy7qWCL8z0/wLW+JvEVvNx+CUBWfTUh9LQ4Pa
-0jybfee3aMAGIOZtWIZnXfWBFFZXBooZxCu3nJjlG9f9VoBsa661nK5ngEDErto1
-1Re75GiZ14gsB3o0HTSuhWGz4R89/BUKjy89HV/0o5MDXhTkCPvimZ8LffA/sKYt
-9UsV3Mvo1P2RjLuw0+U3RtM9mSuUzHpj9sHCNQic22oG+mBL8pm3yNvjuAhKh1mT
-JkzYx+zwGoKsGeBv8BJo4kZKs2mdm8rHFADI7nUltCA+9Phu5VQhCHF33Ew5YWuK
-cmtgBMi5AoGBANxh312R0cjTM5gVeN3uFxVf877l/5ztXW80pG0mJq/BImb9N2LP
-EDXOCDV5yXTWAXmbZrdVmFUDs4/uaJF7+dVMWO+46lZ0TG4giUbahY8uGrcI9QV+
-tXQYXYLZ/37AcmhgtXv3JLOP8CDrev7KHikd6VxoQNGLBl+WGMuW/WpbAoGBAMbt
-ggbL0Fz5gs9c0xBLt+Pix5xMDQr8jc8kVJBALycMXPUVqUlOsY3a0tluVrf2bojo
-ujIL36QiRyS4bdrlLYDftTykDuyvG69e69JAAdlFgM2sUUXFg+FNdFxlwjUSSnuh
-yV8/x0JUVbpPLps6OODHin+uU6+UdJYHr8m7Eo57AoGBALcR0oQfAt7Jm11l0N7C
-zogiCg/1bY5Fm80qNMC65X4weMyG4oCBM50OhsEtZw1YTSdg0UXQo9dTWNFioZjh
-HNt0LZkNyhSBTZBaFM837aTQDr8ngKrM5B0JtHxjbRs08JUGaRwOZH2JP1eJZcXL
-zpwnTdhGfjnTPDshK33L8r1rAoGAc/Aw/C0Ff2qcZqa/DJxUzKh7lghtAZ44OCYA
-cyI1WRjHhL/fLi6DJR4IDVlViVpDCeA5xLlO2qZvuGMVA6LWZmn7gyBK4n8cL5Wu
-85cCfNMZQsXPiE6ZklJGIyPbkHrcljmw16agR3RHkpJbo3THeZpSih/b/lUTre1E
-8tno8skCgYEAuNuIuzkCNDeUCgbgiqvLA8nWTaas6E9yLUhluhkZtpK0BQhSJWRB
-HGQN6Ewm/5bgFXnfmIdrzF5VZ3+Occ83walozlzaRcJFTOUS9PQiE0XuxswWi0jA
-c7k+aDgfEKp5qqzaVvyG8HWNQnK8QOgkW9UZm0DNlPolKb9BmKvXGJk=
------END RSA PRIVATE KEY-----',
-
-'last_rsa_timestamp' => 1409819029);
+'last_rsa_timestamp' => 1410175472);
 
 ?>

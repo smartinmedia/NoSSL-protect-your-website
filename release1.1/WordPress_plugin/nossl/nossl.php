@@ -4,7 +4,7 @@ defined('ABSPATH') or die("No script kiddies please!");
 
 /**
  * @package NoSSL
- * @version 1.0
+ * @version 1.1
  *
  */
 /*
